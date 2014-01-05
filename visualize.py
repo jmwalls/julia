@@ -10,7 +10,12 @@ if __name__ == '__main__':
 
     data = np.loadtxt (sys.argv[1])
 
-    plt.imshow (data)
+    fig = plt.figure ()
+    ax = fig.add_subplot (111)
+
+    ax.imshow (data, cmap=plt.cm.gray_r)
+    ax.axis ('off')
+
     plt.show ()
 
     sys.exit (0)

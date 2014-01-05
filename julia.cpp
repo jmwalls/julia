@@ -71,6 +71,7 @@ Julia::Julia (const Complex& c, const Complex& z0, const Complex& z1,
     _llcorner = Complex (ll_re, ll_im);
     _rows = floor (ur_im - ll_im)/_dx; 
     _cols = floor (ur_re - ll_re)/_dx;
+    cout << "ll left corner: " << _llcorner << endl;
 
     _vals.reserve (_rows*_cols);
     for (size_t i=0;i<_rows;++i) {
@@ -92,7 +93,7 @@ void Julia::compute ()
     for (size_t k=0;k<_maxiters;++k) {
         for (size_t i=0;i<_rows;++i) {
             for (size_t j=0;j<_cols;++j) {
-                pair<Complex*,double> *p = &_vals[i*_rows+j];
+                pair<Complex*,double> *p = &_vals[i*_cols+j];
                 if (!p->first) continue;
                 Complex z = *(p->first);
                 z = z*z + _c;
@@ -110,7 +111,7 @@ void Julia::compute ()
     ofstream out ("out.txt");
     for (size_t i=0;i<_rows;++i) {
         for (size_t j=0;j<_cols;++j) {
-            pair<Complex*,double> *p = &_vals[i*_rows+j];
+            pair<Complex*,double> *p = &_vals[i*_cols+j];
             if (!p->first) out << p->second << "\t";
             else {
                 out << 1 << "\t";

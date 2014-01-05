@@ -4,6 +4,15 @@ Complex dynamical systems
 Complex analysis is often considered the prettiest corner of mathematics.
 Let's explore one of the reasons why that's true.
 
+We'll compute the Julia set of a complex dynamical system---the quadratic
+polynomial
+
+$$
+\begin{equation}
+    f (z) = z^2 + c
+\end{equation}
+$$
+
 
 Run
 -----
