@@ -13,6 +13,8 @@ $$
 \end{equation}
 $$
 
+![Alt text](https://raw.githubusercontent.com/jmwalls/julia/master/example.png "Example c = -0.726895347709114071439 + 0.188887129043845954792 i")
+
 
 Run
 -----

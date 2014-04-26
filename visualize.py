@@ -18,4 +18,6 @@ if __name__ == '__main__':
 
     plt.show ()
 
+    fig.savefig ('out.png', dpi=fig.dpi, bbox_inches='tight')
+
     sys.exit (0)
