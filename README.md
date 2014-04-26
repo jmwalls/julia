@@ -19,7 +19,8 @@ $$
 Run
 -----
 
-To build `julia` and run:
+We use Boost (for lexical casting), but otherwise there are no other
+dependencies. To build `julia` and run:
 
 $ g++ -std=c++0x -o julia julia.cpp  
 $ ./julia \<c\> \<real (z0)\>\<imag (z0)\> \<real (z1)\>\<imag (z1)\> \<dx\> \<maxiters\>
