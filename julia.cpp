@@ -33,28 +33,28 @@ using namespace std;
 
 class Julia 
 {
-  public:
-    Julia (const Complex& c, const Complex& z0, const Complex& z1, double dx,
-            size_t maxiters);
-    ~Julia () {} 
+public:
+  Julia (const Complex& c, const Complex& z0, const Complex& z1, double dx,
+          size_t maxiters);
+  ~Julia () {} 
 
-    void compute ();
+  void compute ();
 
-  private:
-    const Complex _c;              // complex parameter
-    double _r;                     // divergence threshold
+private:
+  const Complex _c;              // complex parameter
+  double _r;                     // divergence threshold
 
-    Complex _llcorner;             // lower-left, upper-right corners
-    double _dx;                    // step size
-    size_t _rows, _cols;           // coordinate vals
+  Complex _llcorner;             // lower-left, upper-right corners
+  double _dx;                    // step size
+  size_t _rows, _cols;           // coordinate vals
 
-    size_t _maxiters;
+  size_t _maxiters;
 
-    // track coords in window, null first means has diverged, second is
-    // 'color' indicating iteration when converged iter/maxiters
-    vector<pair<Complex*,double> > _vals; 
+  // track coords in window, null first means has diverged, second is
+  // 'color' indicating iteration when converged iter/maxiters
+  vector<pair<Complex*,double> > _vals; 
 
-    Julia () {}
+  Julia () {}
 };
 
 Julia::Julia (const Complex& c, const Complex& z0, const Complex& z1, 
